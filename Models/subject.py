@@ -30,6 +30,8 @@ class Subject:
             return "P"
         else:
             return "F"
+        
+#samnang 24594828
 
         
             
