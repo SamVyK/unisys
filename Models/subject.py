@@ -8,7 +8,10 @@ class Subject:
         self.name = name 
         self.mark = random.randiant(25,100)
         self.grade = self.calculate_grade()
-
+#represents subject objects, unqiue 3-digits ID 
+#subject name 
+#generated marks
+#grade calculated marks 
     def _generate_id(self):
         attempts = 0
         while attempts < 100:
@@ -18,7 +21,7 @@ class Subject:
                 return new_id
             attempts += 1
         raise Exception("Unable to generate ID.")
-
+#Generates unique 3-digit subject ID, retries up to 100 times to avoid duplication.
     def calculate_grade(self):
         if self.mark >= 85:
             return "HD"
@@ -30,9 +33,12 @@ class Subject:
             return "P"
         else:
             return "F"
-        
-#samnang 24594828
-
-        
-            
     
+    #shows  the grade based on the randomly assigned mark.
+        #Grade scale:
+        #- HD: 85+
+        #- D: 75–84
+        #- C: 65–74
+        #- P: 50–64
+        #- F: <50
+    #samnang 24594828
